@@ -4,13 +4,9 @@
   xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
 
-  <groupId>com.zaur.spring</groupId>
-  <artifactId>spring_course_zaur</artifactId>
+  <groupId>hibernate_mapping</groupId>
+  <artifactId>hibernate_mapping</artifactId>
   <version>1.0-SNAPSHOT</version>
-
-  <name>spring_course_zaur</name>
-  <!-- FIXME change it to the project's website -->
-  <url>https://www.example.com</url>
 
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -68,12 +64,7 @@
       <version>8.0.17</version>
     </dependency>
 
-
-
   </dependencies>
-
-
-
 
   <build>
     <pluginManagement><!-- lock down plugins versions to avoid using Maven defaults (may be moved to parent pom) -->
