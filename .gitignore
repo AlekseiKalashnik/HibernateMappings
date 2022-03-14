@@ -1,2 +1,4 @@
 # Project exclude paths
 /target/
+.idea
+spring_course_zaur.iml

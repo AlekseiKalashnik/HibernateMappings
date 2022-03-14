@@ -25,6 +25,7 @@ public class Test5 {
 
             System.out.println("Done!");
         }
+
         finally {
             factory.close();
         }

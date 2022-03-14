@@ -1,7 +1,7 @@
-package hibernate_test2;
+package hibernate_one_to_one;
 
-import hibernate_test2.entity.Detail;
-import hibernate_test2.entity.Employee;
+import hibernate_one_to_one.entity.Detail;
+import hibernate_one_to_one.entity.Employee;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;
@@ -18,7 +18,7 @@ public class Test1 {
             Session session = factory.getCurrentSession(); //нельзя переиспользовать
             Employee employee = new Employee("Alex", "K", "IT", 2000);
             Detail detail = new Detail("Mos", "1234554321", "a@com");
-            employee.setEpmloyeeDetail(detail);
+            employee.setEmployeeDetail(detail);
             session.beginTransaction();
 
             session.save(employee);

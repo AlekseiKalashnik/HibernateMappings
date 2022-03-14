@@ -1,4 +1,4 @@
-package hibernate_test2.entity;
+package hibernate_one_to_one.entity;
 
 import javax.persistence.*;
 
@@ -20,6 +20,15 @@ public class Detail {
     @Column(name="email")
     private String email;
 
+    /*здесь уже не нужна аннотация JoinColumn, потому что эта связь уже указана в классе Employee нами ранее.
+    поэтому мы как бы говорим - поищи эту анноиация по этому полю в скоюках в классе Employee.*/
+    @OneToOne(mappedBy = "employeeDetail",
+            cascade = {
+            CascadeType.PERSIST,
+            CascadeType.REFRESH})
+    private Employee employee;
+    //теперь операция delete не будет каскадной
+
     public Detail() {
     }
 
@@ -27,6 +36,15 @@ public class Detail {
         this.city = city;
         this.phoneNumber = phoneNumber;
         this.email = email;
+    }
+
+
+    public Employee getEmployee() {
+        return employee;
+    }
+
+    public void setEmployee(Employee employee) {
+        this.employee = employee;
     }
 
     public int getId() {
